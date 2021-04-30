@@ -2,6 +2,9 @@ package com.tokiii.learn;
 
 import java.util.Scanner;
 
+/**
+ * 普通队列
+ */
 public class ArrayQueueTest {
 
     public static void main(String[] args) {

@@ -111,6 +111,7 @@ class CircleArrayQueue {
             return;
         }
         // (rear + maxSize - front) % maxSize 计算有效数据 初始值是front 然后 小于front+ 有效数据遍历  i%maxsize是真实的下标
+        // 可以这么理解  当front > rear 时 证明有效数据是rear - front   当front < rear 时 证明 rear 走了循环 rear + maxSize - front 是真实的个数  取余只是个算法可以把这两种情况合并， 都是舍弃一个 maxSize
         for (int i = front; i < front + (rear + maxSize - front) % maxSize; i++) {
             System.out.printf("arr[%d]=%d\t\n", i % maxSize, arr[i % maxSize]);
         }
